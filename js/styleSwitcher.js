@@ -28,6 +28,16 @@ for (let i = 0; i < totalBodySkin; i++) {
     });
 }
 
+// Set dark mode as default on page load
+window.addEventListener('load', () => {
+    document.body.className = 'dark';
+    // Set the dark radio button as checked
+    const darkRadio = document.querySelector('input[name="body-skin"][value="dark"]');
+    if (darkRadio) {
+        darkRadio.checked = true;
+    }
+});
+
 document.querySelector('.toggle-style-switcher').addEventListener('click', () => {
     document.querySelector('.style-switcher').classList.toggle('open');
 });

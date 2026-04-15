@@ -11,94 +11,102 @@ window.addEventListener('load', function(){
 // iTyped 
 
 window.ityped.init(document.querySelector('.iTyped'), {
-    strings: ["I'm a Web Developer", 'I Love Html5', 'I Love CSS3', 'I Love Jquery', 'I Love Laravel'],
+    strings: ["I'm a Software Engineer", 'I make battlebots', 'I teach'],
     loop: true
 });
 
 // Portfolio Item Filter
 
-const filterContainer = document.querySelector('.portfolio-filter'),
-    filterBtns = filterContainer.children,
-    totalFilterBtn = filterBtns.length,
-    portfolioItems = document.querySelectorAll('.portfolio-item'),
-    totalPortfolioItem = portfolioItems.length;
-    
-    for (let i = 0; i < totalFilterBtn; i++) {
-        filterBtns[i].addEventListener("click", function(){
-            filterContainer.querySelector('.active').classList.remove('active');
-            this.classList.add("active");
+const filterContainer = document.querySelector('.portfolio-filter');
 
-            const filterValue = this.getAttribute('data-filter');
-            for (let k = 0; k < totalPortfolioItem; k++) {
-                if (filterValue === portfolioItems[k].getAttribute('data-category')) {
-                    portfolioItems[k].classList.remove('hide');
-                    portfolioItems[k].classList.add('show');
-                } else{
-                    portfolioItems[k].classList.remove('show');
-                    portfolioItems[k].classList.add('hide');
+if (filterContainer) {
+    const filterBtns = filterContainer.children,
+        totalFilterBtn = filterBtns.length,
+        portfolioItems = document.querySelectorAll('.portfolio-item'),
+        totalPortfolioItem = portfolioItems.length;
+        
+        for (let i = 0; i < totalFilterBtn; i++) {
+            filterBtns[i].addEventListener("click", function(){
+                filterContainer.querySelector('.active').classList.remove('active');
+                this.classList.add("active");
+
+                const filterValue = this.getAttribute('data-filter');
+                for (let k = 0; k < totalPortfolioItem; k++) {
+                    if (filterValue === portfolioItems[k].getAttribute('data-category')) {
+                        portfolioItems[k].classList.remove('hide');
+                        portfolioItems[k].classList.add('show');
+                    } else{
+                        portfolioItems[k].classList.remove('show');
+                        portfolioItems[k].classList.add('hide');
+                    }
+                    if (filterValue === 'all') {
+                        portfolioItems[k].classList.remove('hide');
+                        portfolioItems[k].classList.add('show');
+                    }
                 }
-                if (filterValue === 'all') {
-                    portfolioItems[k].classList.remove('hide');
-                    portfolioItems[k].classList.add('show');
-                }
-            }
-        });
-    }
+            });
+        }
+}
 
 // Portfolio Lighbox
 
-const lightbox = document.querySelector('.lightbox'),
-    lightboxImg = lightbox.querySelector('.lightbox-img'),
-    lightboxText = lightbox.querySelector('.caption-text'),
-    lightboxClose = lightbox.querySelector('.lightbox-close'),
-    lightboxCounter = lightbox.querySelector('.caption-counter');
+const lightbox = document.querySelector('.lightbox');
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+const totalPortfolioItem = portfolioItems.length;
 
-let itemIndex = 0;
+if (lightbox && totalPortfolioItem > 0) {
+    const lightboxImg = lightbox.querySelector('.lightbox-img'),
+        lightboxText = lightbox.querySelector('.caption-text'),
+        lightboxClose = lightbox.querySelector('.lightbox-close'),
+        lightboxCounter = lightbox.querySelector('.caption-counter');
 
-for (let i = 0; i < totalPortfolioItem; i++) {
-    portfolioItems[i].addEventListener('click', function(){
-        itemIndex = i;
+    let itemIndex = 0;
+
+    for (let i = 0; i < totalPortfolioItem; i++) {
+        portfolioItems[i].addEventListener('click', function(){
+            itemIndex = i;
+            changeItem();
+            toggleLightbox();
+        });
+    }
+
+    function toggleLightbox() {
+        lightbox.classList.toggle('open');
+    }
+
+    function changeItem() {
+        let imgSrc = portfolioItems[itemIndex].querySelector('.portfolio-img img').getAttribute('src');
+        lightboxImg.src = imgSrc;
+        lightboxText.innerHTML = portfolioItems[itemIndex].querySelector('h4').innerHTML;
+        lightboxCounter.innerHTML = (itemIndex + 1) + " of " + totalPortfolioItem;
+    }
+
+    window.prevItem = function() {
+        if (itemIndex === 0) {
+            itemIndex = totalPortfolioItem - 1;
+        } else {
+            itemIndex--;
+        }
         changeItem();
-        toggleLightbox();
+    }
+
+    window.nextItem = function() {
+        if (itemIndex === totalPortfolioItem - 1) {
+            itemIndex = 0;
+        } else {
+            itemIndex++;
+        }
+        changeItem();
+    }
+
+    // close lightbox
+
+    lightbox.addEventListener('click', function(event){
+        if(event.target === lightboxClose || event.target === lightbox){
+            toggleLightbox();
+        }
     });
 }
-
-function toggleLightbox() {
-    lightbox.classList.toggle('open');
-}
-
-function changeItem() {
-    let imgSrc = portfolioItems[itemIndex].querySelector('.portfolio-img img').getAttribute('src');
-    lightboxImg.src = imgSrc;
-    lightboxText.innerHTML = portfolioItems[itemIndex].querySelector('h4').innerHTML;
-    lightboxCounter.innerHTML = (itemIndex + 1) + " of " + totalPortfolioItem;
-}
-
-function prevItem() {
-    if (itemIndex === 0) {
-        itemIndex = totalPortfolioItem - 1;
-    } else {
-        itemIndex--;
-    }
-    changeItem();
-}
-
-function nextItem() {
-    if (itemIndex === totalPortfolioItem - 1) {
-        itemIndex = 0;
-    } else {
-        itemIndex++;
-    }
-    changeItem();
-}
-
-// close lightbox
-
-lightbox.addEventListener('click', function(event){
-    if(event.target === lightboxClose || event.target === lightbox){
-        toggleLightbox();
-    }
-});
 
 // Aside Navbar
 
@@ -187,4 +195,53 @@ function asideSectionTogglerBtn()
     for (let i = 0; i < totalSection; i++) {
         allSection[i].classList.toggle('open');
     }
+}
+
+// Project Carousel
+
+// Store carousel state for each project
+const carouselState = {};
+
+// Project images for each carousel
+const projectImages = {
+    'Capsize': ['images/portfolio/1.jpg', 'images/portfolio/4.jpg'],
+    'Test Box': ['images/portfolio/2.jpg', 'images/portfolio/5.jpg'],
+    'Harmony': ['images/portfolio/3.jpg', 'images/portfolio/6.jpg']
+};
+
+// Initialize carousel state
+document.querySelectorAll('.project-card').forEach((card, index) => {
+    const projectTitle = card.querySelector('.project-info h3').textContent;
+    carouselState[projectTitle] = 0;
+});
+
+function changeImage(event, direction) {
+    // Stop propagation to prevent navigating to the link
+    event.stopPropagation();
+    
+    const button = event.target.closest('.carousel-btn');
+    if (!button) return;
+    
+    const carousel = button.closest('.project-carousel');
+    const projectCard = carousel.closest('.project-card');
+    const projectTitle = projectCard.querySelector('.project-info h3').textContent;
+    const images = projectImages[projectTitle];
+    
+    if (!images) return;
+    
+    // Update carousel state
+    carouselState[projectTitle] += direction;
+    if (carouselState[projectTitle] < 0) {
+        carouselState[projectTitle] = images.length - 1;
+    } else if (carouselState[projectTitle] >= images.length) {
+        carouselState[projectTitle] = 0;
+    }
+    
+    // Update image
+    const img = carousel.querySelector('.carousel-image');
+    img.style.opacity = '0.5';
+    setTimeout(() => {
+        img.src = images[carouselState[projectTitle]];
+        img.style.opacity = '1';
+    }, 150);
 }

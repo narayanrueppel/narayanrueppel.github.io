@@ -8,9 +8,9 @@ Upvesh is a  fully responsive personal, portfolio, resume template that consists
 | --- | --- | --- |
 | [![Home](https://github.com/DanielSPF/personal-website/blob/master/project-content/Section%20Screens/1-home.jpg)](https://github.com/DanielSPF/personal-website/blob/master/project-content/Section%20Screens/1-home.jpg) | [![About](https://github.com/DanielSPF/personal-website/blob/master/project-content/Section%20Screens/2-About.jpg)](https://github.com/https://github.com/DanielSPF/personal-website/blob/master/project-content/Section%20Screens/2-About.jpg) | [![Services](https://github.com/DanielSPF/personal-website/blob/master/project-content/Section%20Screens/3-Services.jpg)](https://github.com/DanielSPF/personal-website/blob/master/project-content/Section%20Screens/3-Services.jpg)
 
-| Portfolio | Blog | Contact
-| --- | --- | --- |
-| [![Portfolio](https://github.com/DanielSPF/personal-website/blob/master/project-content/Section%20Screens/4-Portfolio.jpg)](https://github.com/DanielSPF/personal-website/blob/master/project-content/Section%20Screens/4-Portfolio.jpg) | [![Blog](https://github.com/DanielSPF/personal-website/blob/master/project-content/Section%20Screens/5-Blog.jpg)](https://github.com/DanielSPF/personal-website/blob/master/project-content/Section%20Screens/5-Blog.jpg) | [![Contact](https://github.com/DanielSPF/personal-website/blob/master/project-content/Section%20Screens/6-Contact.jpg)](https://github.com/DanielSPF/personal-website/blob/master/project-content/Section%20Screens/6-Contact.jpg)
+| Portfolio | Contact
+| --- | --- |
+| [![Portfolio](https://github.com/DanielSPF/personal-website/blob/master/project-content/Section%20Screens/4-Portfolio.jpg)](https://github.com/DanielSPF/personal-website/blob/master/project-content/Section%20Screens/4-Portfolio.jpg) | [![Contact](https://github.com/DanielSPF/personal-website/blob/master/project-content/Section%20Screens/6-Contact.jpg)](https://github.com/DanielSPF/personal-website/blob/master/project-content/Section%20Screens/6-Contact.jpg)
 
 ## Demo
 

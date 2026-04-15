@@ -12,12 +12,8 @@
     - icon (fa fa-user) font Awesome Icon         About
     - icon (fa fa-list) font Awesome Icon         Service
     - icon (fa fa-briefcase) font Awesome Icon    Portfolio
-    - icon (fa fa-envelope) font Awesome Icon     Blog
-    - icon (fa fa-comments) font Awesome Icon     Contact
+    - icon (fa fa-graduation-cap) font Awesome Icon    Tutoring
 
-    - copyright text
-
-1. Home Section
 
     - Photo
     - Upvesh Kumar
@@ -42,7 +38,7 @@
    - Website : www.domain.com
    - Email : info@gmail.com
    - Degree : M.Tech
-   - Phone : +91 8800 000 000
+   - Phone : +1 415 603 080
    - City : Mumbai
    - Freelance : Available
 
@@ -118,39 +114,19 @@
    - All, Web, Design, Photography, Wordpress
 
 
-5. Blog
-
-   - 4 jun 2020
-   - Responsive Web Design
-   - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo 
-     quam, eum alias id, repellendus magni, quas.
-   - Tags : Html , css
-
-   - 4 jun 2020
-   - Creative Slideshow
-   - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo 
-     quam, eum alias id, repellendus magni, quas.
-   - Tags : Html , Javascript
-
-   - 4 jun 2020
-   - Image Gallery Lightbox
-   - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo 
-     quam, eum alias id, repellendus magni, quas.
-   - Tags : Javascript
-
-6. Contact Me
+5. Contact Me
 
    - icon : fa fa-phone (font awesome icon)
    - Call Us On
-   - +91 8800 000 000
+   - +1 415 603 0809
 
    - icon : fa fa-map-marker (font awesome icon)
    - Office
-   - +91 8800 000 000
+   - +1 415 603 080
 
    - icon : fa fa-envelope (font awesome icon)
    - Email
-   - info@gmail.com
+   - narayanrueppel18@gmail.com
 
      Form Field
    - Name, Email, Subject, Message, Button (Send Message) 

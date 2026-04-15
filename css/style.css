@@ -947,6 +947,244 @@ select {
     line-height: 40px;
 }
 
+/* Projects Section - Project Cards */
+
+.projects .project-card {
+    flex: 0 0 33.33%;
+    -ms-flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.projects .project-card:hover {
+    transform: translateY(-5px);
+}
+
+.projects .project-card-inner {
+    border: 6px solid #fdf9ff;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.projects .project-card:hover .project-card-inner {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.projects .project-card-inner {
+    border: 6px solid #fdf9ff;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.projects .project-card:hover .project-card-inner {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.projects .project-carousel {
+    position: relative;
+    background-color: #000;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+
+.projects .carousel-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.projects .carousel-controls {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.projects .carousel-btn {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    color: #000;
+}
+
+.projects .carousel-btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+.projects .project-info {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.projects .project-info h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.projects .project-info p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+}
+
+/* Project Detail Section */
+
+.project-detail .project-detail-content {
+    flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.project-detail .project-image {
+    flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.project-detail .project-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-detail .project-text {
+    flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.project-detail .project-text h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.project-detail .project-text h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.project-detail .project-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.project-detail .project-text ul {
+    margin: 15px 0;
+}
+
+.project-detail .project-text ul li {
+    margin: 8px 0;
+    color: #666;
+    font-size: 16px;
+}
+
+.project-detail .btn {
+    background-color: #fdb750;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid #fdb750;
+    transition: all 0.3s ease;
+}
+
+.project-detail .btn:hover {
+    background-color: transparent;
+    color: #fdb750;
+}
+
+/* Tutoring Section */
+
+.tutoring .container {
+    padding-bottom: 40px;
+}
+
+.tutoring .tutoring-content {
+    flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.tutoring .tutoring-item {
+    margin-bottom: 30px;
+}
+
+.tutoring .tutoring-item h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-black-900);
+}
+
+.tutoring .tutoring-item p {
+    margin-bottom: 10px;
+    color: var(--text-black-700);
+}
+
+.tutoring .tutoring-item ul {
+    padding-left: 20px;
+}
+
+.tutoring .tutoring-item ul li {
+    margin-bottom: 5px;
+    color: var(--text-black-700);
+}
+
+.tutoring .services-offered ul li,
+.tutoring .get-started p {
+    color: var(--text-black-700);
+}
+
 /* Lightbox */
 
 .lightbox {
@@ -1290,7 +1528,8 @@ select {
 
     .service .service-item,
     .blog .blog-item,
-    .portfolio .portfolio-item {
+    .portfolio .portfolio-item,
+    .projects .project-card {
         flex: 0 0 50%;
         -ms-flex: 0 0 50%;
         max-width: 50%;
@@ -1305,7 +1544,10 @@ select {
     .blog .blog-item,
     .about .about-content .skills,
     .about .about-content .education,
-    .about .about-content .experience {
+    .about .about-content .experience,
+    .projects .project-card,
+    .project-detail .project-image,
+    .project-detail .project-text {
         flex: 0 0 100%;
         -ms-flex: 0 0 100%;
         max-width: 100%;
