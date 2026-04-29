@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capsize - Narayan Rueppel</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" class="alternate-style" title="pink" href="../css/skins/pink.css" type="text/css" disabled>
+    <link rel="stylesheet" class="alternate-style" title="blue" href="../css/skins/blue.css" type="text/css" disabled>
+    <link rel="stylesheet" class="alternate-style" title="green" href="../css/skins/green.css" type="text/css">
+    <link rel="stylesheet" class="alternate-style" title="orange" href="../css/skins/orange.css" type="text/css" disabled>
+    <link rel="stylesheet" class="alternate-style" title="yellow" href="../css/skins/yellow.css" type="text/css" disabled>
     <link rel="stylesheet" href="../css/styleSwitcher.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -31,8 +36,22 @@
                     <li><a href="../index.html#services"><i class="fa fa-list"></i> Services</a></li>
                     <li><a href="../index.html#projects"><i class="fa fa-briefcase"></i> Projects</a></li>
                     <li><a href="../index.html#tutoring"><i class="fa fa-graduation-cap"></i> Tutoring</a></li>
-                    <li><a href="../index.html#contact"><i class="fa fa-comments"></i> Contact</a></li>
                 </ul>
+                <!-- Contact Info -->
+                <div class="contact-info">
+                  <div class="contact-item">
+                    <i class="fa fa-file"></i>
+                    <a href="https://drive.google.com/drive/folders/11gXn8pZum58s4laX2ZWYqCgxMjH5cKJW" target="_blank">Resume</a>
+                  </div>
+                  <div class="contact-item">
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:narayanrueppel18@gmail.com">narayanrueppel18@gmail.com</a>
+                  </div>
+                  <div class="contact-item">
+                    <i class="fa fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/narayanrueppel/" target="_blank">LinkedIn</a>
+                  </div>
+                </div>
                 <div class="copyright-text">
                     &copy; 2020 The WebShala Template
                 </div>
@@ -78,20 +97,24 @@
 
     <!-- Style Switcher -->
     <div class="style-switcher">
-        <div class="style-switcher-toggler s-icon">
-            <i class="fa fa-cog"></i>
+        <div class="toggle-style-switcher">
+            <i class="fa fa-cog fa-spin"></i>
         </div>
-        <div class="day-night s-icon">
-            <i class="fa fa-moon-o"></i>
-        </div>
-        <h4>Theme Colors</h4>
-        <div class="colors">
-            <span class="color-1" onclick="setActiveStyle('pink')"></span>
-            <span class="color-2" onclick="setActiveStyle('blue')"></span>
-            <span class="color-3" onclick="setActiveStyle('green')"></span>
-            <span class="color-4" onclick="setActiveStyle('orange')"></span>
-            <span class="color-5" onclick="setActiveStyle('yellow')"></span>
-        </div>
+        <h5>Style Switcher</h5>
+        <ul>
+            <li><a href="javascript:void(0);" title="pink" style="background-color: #ec1839;" onclick="setActiveStyle('pink')"></a></li>
+            <li><a href="javascript:void(0);" title="blue" style="background-color: #2196f3;" onclick="setActiveStyle('blue')"></a></li>
+            <li><a href="javascript:void(0);" title="orange" style="background-color: #fa5b0f;" onclick="setActiveStyle('orange')"></a></li>
+            <li><a href="javascript:void(0);" title="yellow" style="background-color: #ffb400;" onclick="setActiveStyle('yellow')"></a></li>
+            <li><a href="javascript:void(0);" title="green" style="background-color: #72b626;" onclick="setActiveStyle('green')"></a></li>
+        </ul>
+        <h5>Style</h5>
+        <label>
+            <input type="radio" class="body-skin" name="body-skin" value="light"> Light
+        </label>
+        <label>
+            <input type="radio" class="body-skin" name="body-skin" value="dark"> Dark
+        </label>
     </div>
 
     <script src="../js/main.js"></script>

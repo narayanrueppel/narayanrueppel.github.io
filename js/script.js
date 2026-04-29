@@ -10,10 +10,12 @@ window.addEventListener('load', function(){
 
 // iTyped 
 
-window.ityped.init(document.querySelector('.iTyped'), {
-    strings: ["I'm a Software Engineer", 'I make battlebots', 'I teach'],
-    loop: true
-});
+if (window.ityped && typeof window.ityped.init === 'function') {
+    window.ityped.init(document.querySelector('.iTyped'), {
+        strings: ["I'm a Software Engineer", 'I make battlebots', 'I teach'],
+        loop: true
+    });
+}
 
 // Portfolio Item Filter
 
@@ -164,13 +166,16 @@ function updateNav(element)
     }
 }
 
-document.querySelector('.hire-me').addEventListener('click', function(){
-    const sectionIndex = this.getAttribute('data-section-index');
-    addBackSectionClass(sectionIndex);
-    showSection(this);
-    updateNav(this);
-    removeBackSectionClass();
-});
+const hireMeButton = document.querySelector('.hire-me');
+if (hireMeButton) {
+    hireMeButton.addEventListener('click', function(){
+        const sectionIndex = this.getAttribute('data-section-index');
+        addBackSectionClass(sectionIndex);
+        showSection(this);
+        updateNav(this);
+        removeBackSectionClass();
+    });
+}
 
 function showSection(element) 
 {
@@ -182,6 +187,30 @@ function showSection(element)
 
     document.querySelector('#'+target).classList.add('active');
 }
+
+function activateSectionFromHash() {
+    const hash = window.location.hash;
+    if (!hash) return;
+
+    const section = document.querySelector(hash);
+    if (!section) return;
+
+    for (let i = 0; i < totalSection; i++) {
+        allSection[i].classList.remove('active');
+    }
+    section.classList.add('active');
+
+    for (let i = 0; i < totalNavList; i++) {
+        const link = navList[i].querySelector('a');
+        link.classList.remove('active');
+        if (link.getAttribute('href') === hash) {
+            link.classList.add('active');
+        }
+    }
+}
+
+window.addEventListener('load', activateSectionFromHash);
+window.addEventListener('hashchange', activateSectionFromHash);
 
 const navTogglerBtn = document.querySelector('.nav-toggler'),
     aside = document.querySelector('.aside');
@@ -216,8 +245,11 @@ document.querySelectorAll('.project-card').forEach((card, index) => {
 });
 
 function changeImage(event, direction) {
+    event = event || window.event;
+    // Prevent the click from activating the parent project link
+    if (event.preventDefault) event.preventDefault();
     // Stop propagation to prevent navigating to the link
-    event.stopPropagation();
+    if (event.stopPropagation) event.stopPropagation();
     
     const button = event.target.closest('.carousel-btn');
     if (!button) return;
@@ -245,3 +277,10 @@ function changeImage(event, direction) {
         img.style.opacity = '1';
     }, 150);
 }
+
+document.querySelectorAll('.carousel-btn').forEach(button => {
+    const direction = button.classList.contains('prev') ? -1 : 1;
+    button.addEventListener('click', function(event) {
+        changeImage(event, direction);
+    });
+});

@@ -46,8 +46,22 @@
           <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
           <li><a href="#projects"><i class="fa fa-briefcase"></i> Projects</a></li>
           <li><a href="#tutoring"><i class="fa fa-graduation-cap"></i> Tutoring</a></li>
-          <li><a href="#contact"><i class="fa fa-comments"></i> Contact</a></li>
         </ul>
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fa fa-file"></i>
+            <a href="https://drive.google.com/drive/folders/11gXn8pZum58s4laX2ZWYqCgxMjH5cKJW" target="_blank">Resume</a>
+          </div>
+          <div class="contact-item">
+            <i class="fa fa-envelope"></i>
+            <a href="mailto:narayanrueppel18@gmail.com">narayanrueppel18@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <i class="fa fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/narayanrueppel/" target="_blank">LinkedIn</a>
+          </div>
+        </div>
         <!-- Copyright -->
         <div class="copyright-text">
           &copy; 2020 The WebShala Template
@@ -128,7 +142,8 @@
                         <div class="timeline-item">
                           <div class="circle-dot"></div>
                           <h6 class="timeline-date"><i class="fa fa-calendar"></i> Summer 2025</h6>
-                          <h4 class="timeline-title">Bloomberg Intern</h4>
+                          <h4 class="timeline-title">Bloomberg</h4>
+                          <h5 class="timeline-subtitle">Software Engineering Intern</h5>
                           <p class="timeline-text"></p>
                         </div>
                         <!-- timeline Item End -->
@@ -137,6 +152,7 @@
                           <div class="circle-dot"></div>
                           <h6 class="timeline-date"><i class="fa fa-calendar"></i> Summer 2024</h6>
                           <h4 class="timeline-title">Seaview Systems</h4>
+                          <h5 class="timeline-subtitle">Software Engineering Intern</h5>
                           <p class="timeline-text"></p>
                         </div>
                         <!-- timeline Item End -->
@@ -161,6 +177,11 @@
             </div>
           </div>
           <div class="row">
+            <div class="section-description padd-15">
+              <p>Click on the project widgets to explore the carousel images and learn more about each project.</p>
+            </div>
+          </div>
+          <div class="row">
             <!-- Project 1: Capsize -->
             <a href="pages/capsize.html" class="project-card padd-15" style="text-decoration: none; color: inherit;">
               <div class="project-card-inner shadow-dark">
@@ -169,8 +190,8 @@
                     <img src="images/portfolio/1.jpg" alt="Capsize" class="carousel-image">
                   </div>
                   <div class="carousel-controls">
-                    <button class="carousel-btn prev" onclick="changeImage(event, -1)"><i class="fa fa-chevron-left"></i></button>
-                    <button class="carousel-btn next" onclick="changeImage(event, 1)"><i class="fa fa-chevron-right"></i></button>
+                    <button type="button" class="carousel-btn prev"><i class="fa fa-chevron-left"></i></button>
+                    <button type="button" class="carousel-btn next"><i class="fa fa-chevron-right"></i></button>
                   </div>
                 </div>
                 <div class="project-info">
@@ -189,8 +210,8 @@
                     <img src="images/portfolio/2.jpg" alt="Test Box" class="carousel-image">
                   </div>
                   <div class="carousel-controls">
-                    <button class="carousel-btn prev" onclick="changeImage(event, -1)"><i class="fa fa-chevron-left"></i></button>
-                    <button class="carousel-btn next" onclick="changeImage(event, 1)"><i class="fa fa-chevron-right"></i></button>
+                    <button type="button" class="carousel-btn prev"><i class="fa fa-chevron-left"></i></button>
+                    <button type="button" class="carousel-btn next"><i class="fa fa-chevron-right"></i></button>
                   </div>
                 </div>
                 <div class="project-info">
@@ -209,8 +230,8 @@
                     <img src="images/portfolio/3.jpg" alt="Harmony" class="carousel-image">
                   </div>
                   <div class="carousel-controls">
-                    <button class="carousel-btn prev" onclick="changeImage(event, -1)"><i class="fa fa-chevron-left"></i></button>
-                    <button class="carousel-btn next" onclick="changeImage(event, 1)"><i class="fa fa-chevron-right"></i></button>
+                    <button type="button" class="carousel-btn prev"><i class="fa fa-chevron-left"></i></button>
+                    <button type="button" class="carousel-btn next"><i class="fa fa-chevron-right"></i></button>
                   </div>
                 </div>
                 <div class="project-info">
@@ -300,85 +321,6 @@
         </div>
       </section>
       <!-- Tutoring Section End -->
-
-      <!-- Contact Section -->
-      <section class="contact section" id="contact">
-        <div class="container">
-          <div class="row">
-            <div class="section-title padd-15">
-              <h2>Contact Me</h2>
-            </div>
-          </div>
-          <div class="row">
-            <!-- contact-info-item  -->
-            <div class="contact-info-item padd-15">
-              <div class="icon">
-                <i class="fa fa-phone"></i>
-                <h4>Phone Number</h4>
-                <p>+1 415 603 0809</p>
-              </div>
-            </div>
-            <!-- contact-info-item end -->
-            <!-- contact-info-item  -->
-            <div class="contact-info-item padd-15">
-              <div class="icon">
-                <i class="fa fa-linkedin"></i>
-                <h4>Linkedin</h4>
-                <p>https://www.linkedin.com/in/narayanrueppel/</p>
-              </div>
-            </div>
-            <!-- contact-info-item end -->
-            <!-- contact-info-item  -->  
-            <div class="contact-info-item padd-15">
-              <div class="icon">
-                <i class="fa fa-envelope"></i>
-                <h4>Email</h4>
-                <p>narayanrueppel18@gmail.com</p>
-              </div>
-            </div>
-            <!-- contact-info-item end -->
-          </div>
-
-          <!-- Contact Form -->
-          <div class="row">
-            <form action="#" class="contact-form padd-15">
-              <div class="row">
-                <div class="form-item col-6 padd-15">
-                  <div class="form-group">
-                    <input type="text" name="" class="form-control" placeholder="Name*">
-                  </div>
-                </div>
-                <div class="form-item col-6 padd-15">
-                  <div class="form-group">
-                    <input type="email" name="" class="form-control" placeholder="Email*">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="form-item col-12 padd-15">
-                  <div class="form-group">
-                    <input type="text" name="" class="form-control" placeholder="Subject*">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="form-item col-12 padd-15">
-                  <div class="form-group">
-                    <textarea class="form-control" name="" placeholder="Your Message..."></textarea>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 padd-15">
-                  <button type="submit" class="btn">Send Message</button>
-                </div>
-              </div>
-            </form>
-          </div>
-          <!-- Contact Form End -->
-        </div>
-      </section>
-      <!-- Contact Section End -->
 
     </div>
     <!-- Main Content End -->

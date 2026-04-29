@@ -430,6 +430,120 @@ select {
     margin-right: 5px;
 }
 
+.aside .contact-info {
+    margin: 30px 0;
+}
+
+.aside .contact-item {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.aside .contact-item i {
+    margin-right: 5px;
+    color: #504e70;
+}
+
+.aside .contact-item a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #504e70;
+    text-decoration: none;
+    line-height: 45px;
+    display: block;
+    border-bottom: 1px solid #e8dfec;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.aside .contact-item a:hover {
+    color: #fdb750;
+}
+
+/* Dark mode styles */
+body.dark .aside {
+    background-color: #2a2a2a;
+}
+
+body.dark .section {
+    background-color: #1a1a1a;
+}
+
+body.dark .aside .nav li a {
+    color: #ffffff;
+}
+
+body.dark .aside .contact-item a {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+body.dark .aside .contact-item i {
+    color: #ffffff;
+}
+
+body.dark .section-title h2 {
+    color: #ffffff;
+}
+
+body.dark .about .about-content .about-text h3 {
+    color: #ffffff;
+}
+
+body.dark .about .about-content .about-text p {
+    color: #cccccc;
+}
+
+body.dark .about .about-content .timeline .timeline-title {
+    color: #ffffff;
+}
+
+body.dark .about .about-content .timeline .timeline-subtitle {
+    color: #cccccc;
+}
+
+body.dark .about .about-content .timeline .timeline-text {
+    color: #cccccc;
+}
+
+body.dark .about .about-content .timeline {
+    background-color: #2a2a2a;
+    border-color: #444444;
+}
+
+body.dark .projects .project-card-inner {
+    border-color: #444444;
+    background-color: #2a2a2a;
+}
+
+body.dark .projects .project-info h3 {
+    color: #ffffff;
+}
+
+body.dark .projects .project-info p {
+    color: #cccccc;
+}
+
+body.dark .tutoring .tutoring-content h3 {
+    color: #ffffff;
+}
+
+body.dark .tutoring .tutoring-content p {
+    color: #cccccc;
+}
+
+body.dark .tutoring-item h4 {
+    color: #ffffff;
+}
+
+body.dark .tutoring-item p {
+    color: #cccccc;
+}
+
+body.dark .tutoring-item ul li {
+    color: #cccccc;
+}
+
 .aside .copyright-text {
     position: absolute;
     bottom: 5px;
@@ -720,9 +834,17 @@ select {
 .about .about-content .timeline .timeline-title {
     font-weight: 700;
     font-size: 18px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     text-transform: capitalize;
     color: #302e4d;
+}
+
+.about .about-content .timeline .timeline-subtitle {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    color: #504e70;
 }
 
 .about .about-content .timeline .timeline-text {
