@@ -8,15 +8,6 @@ window.addEventListener('load', function(){
     }, 1000);
 });
 
-// iTyped 
-
-if (window.ityped && typeof window.ityped.init === 'function') {
-    window.ityped.init(document.querySelector('.iTyped'), {
-        strings: ["I'm a Software Engineer", 'I make battlebots', 'I teach'],
-        loop: true
-    });
-}
-
 // Portfolio Item Filter
 
 const filterContainer = document.querySelector('.portfolio-filter');

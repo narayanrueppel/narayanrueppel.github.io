@@ -516,6 +516,25 @@ body.dark .projects .project-card-inner {
     background-color: #2a2a2a;
 }
 
+/* Dark mode: landing skills adjustments (white text, darker cards) */
+body.dark .landing-skills .skills-heading h2 {
+    color: #ffffff;
+}
+body.dark .landing-skills .skills-heading p,
+body.dark .landing-skills .skill-card h4,
+body.dark .landing-skills .skills-subsection h3 {
+    color: #ffffff;
+}
+body.dark .landing-skills .skill-card {
+    background-color: #2a2a2a;
+    border: 1px solid #444444;
+    box-shadow: none;
+}
+body.dark .landing-skills .skill-icon {
+    background: linear-gradient(135deg,#4a90e2 0%,#2a6fb0 100%);
+    color: #ffffff;
+}
+
 body.dark .projects .project-info h3 {
     color: #ffffff;
 }
@@ -559,33 +578,207 @@ body.dark .tutoring-item ul li {
     display: flex;
 }
 
+.home .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+    min-height: calc(100vh - 120px);
+}
+
 .home .intro {
-    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    text-align: left;
+    flex: 0 0 42%;
 }
 
 .home .intro img {
-    height: 200px;
-    width: 200px;
+    height: 280px;
+    width: 280px;
     border-radius: 50%;
-    display: inline-block;
+    display: block;
     border: 8px solid #ffffff;
+    flex: 0 0 auto;
+}
+
+.landing-skills {
+    flex: 0 0 52%;
+    margin-top: 0;
 }
 
 .home .intro h1 {
-    font-size: 30px;
+    font-size: 38px;
     color: #302e4d;
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
-    margin: 20px 0 5px;
+    margin: 0 0 10px 0;
 }
 
-.home .intro span {
-    font-size: 16px;
+.home .intro .intro-subtitle {
+    font-size: 18px;
     font-weight: 500;
-    margin: 0;
-    line-height: 22px;
     color: #504e70;
+    margin: 0 0 10px 0;
+    line-height: 1.6;
+}
 
+.landing-skills {
+    margin-top: 40px;
+}
+
+.landing-skills .skills-heading h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #302e4d;
+}
+
+.landing-skills .skills-heading p {
+    margin: 0 0 24px 0;
+    color: #6b6b7b;
+    max-width: 520px;
+}
+
+ .landing-skills .skills-sections {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.landing-skills .skills-subsection {
+    flex: 1;
+    min-width: 220px;
+}
+
+.landing-skills .skills-subsection h3 {
+    font-size: 18px;
+    margin: 0 0 14px;
+    color: #504e70;
+}
+
+.landing-skills .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 8px;
+}
+
+.landing-skills .skill-card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 12px;
+    padding: 10px 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    text-align: center;
+    aspect-ratio: 1 / 1;
+    background-color: #ffffff;
+}
+
+.landing-skills .skill-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.1);
+}
+
+.landing-skills .skill-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid rgba(48,46,77,0.06);
+    color: #504e70;
+    font-size: 12px;
+}
+
+.landing-skills .skill-icon.js-logo {
+    background: transparent !important;
+    border-radius: 6px;
+    padding: 0;
+    width: 36px;
+    height: 28px;
+    overflow: hidden;
+    border: none;
+}
+.landing-skills .skill-icon.js-logo svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.landing-skills .skill-card.js-full {
+    padding: 0;
+    min-height: 64px;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    background: transparent;
+    border: 2px solid #000;
+    box-shadow: none;
+}
+.landing-skills .skill-card.js-full .skill-icon.js-logo {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+.landing-skills .skill-card.js-full .skill-icon.js-logo svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+body.dark .landing-skills .skill-card.js-full {
+    border-color: #ffffff;
+    background-color: #ffffff;
+}
+
+.landing-skills .skill-card.js-full { position: relative; overflow: hidden; }
+.landing-skills .skill-card.js-full .skill-label {
+    display: none;
+    position: absolute;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+    background: rgba(255,255,255,0.9);
+}
+.landing-skills .skill-card.js-full:hover .skill-label {
+    display: flex;
+}
+.landing-skills .skill-card.js-full:hover .skill-icon { opacity: 0.12; transform: scale(0.98); }
+
+/* Dark-mode hover label */
+body.dark .landing-skills .skill-card.js-full .skill-label {
+    color: #ffffff;
+    background: rgba(0,0,0,0.55);
+}
+
+.landing-skills .skill-card h4 {
+    margin: 0;
+    font-size: 13px;
+    color: #302e4d;
+}
+
+.landing-skills .skill-card p {
+    display: none;
+}
+
+/* Mobile: stack intro content and restore scroll if needed */
+@media(max-width: 991px) {
+    .home .container {
+        display: block;
+        min-height: auto;
+    }
+    .home { overflow-y: auto; }
+    .home .intro { display: block; text-align: center; }
+    .home .intro img { margin: 0 auto 12px; }
+    .landing-skills { margin-top: 30px; }
 }
 
 .home .intro .social-links {
